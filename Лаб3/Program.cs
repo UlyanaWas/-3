@@ -18,7 +18,22 @@ namespace Лаб3
             Inventar Inv3 = new Inventar("Ноутбук бухгалтера", 3, 20000.00, DateTime.Today, Tip2);
             Inventar Inv4 = new Inventar("Зеркало", 4, 15000.00, DateTime.Today, Tip3);
 
-            Inv1.GetInfo();
+            List<Inventar> lstInventar = new List<Inventar>();
+            lstInventar.Add(Inv1);
+            lstInventar.Add(Inv2);
+            lstInventar.Add(Inv3);
+            lstInventar.Add(Inv4);
+
+            int idNum = 0;
+            Console.Write("Введите номер инвентаря ");
+            idNum = Convert.ToInt32(Console.ReadLine());
+
+            Inventar selInv = lstInventar.SingleOrDefault(i1 => i1.IDinv == idNum);
+            if (selInv == null)
+                Console.WriteLine("Не найдено");
+            else 
+                selInv.GetInfo();
+
 
             Console.ReadLine();            
         }
