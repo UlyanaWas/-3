@@ -22,7 +22,7 @@ namespace Лаб3
 
         public void GetInfo ()
         {
-            Console.WriteLine("Код типа: {0}\n    Название: {1}\n    Описание: {2}\n", IDTip, NameTip, OpisanieTip);
+            Console.WriteLine("\n      Код типа: {0}\n      Название: {1}\n      Описание: {2}\n", IDTip, NameTip, OpisanieTip);
         }
     }
 }
